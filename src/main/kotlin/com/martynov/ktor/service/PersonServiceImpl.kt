@@ -9,18 +9,11 @@ class PersonServiceImpl @Inject constructor(
     private val personRepository: PersonRepository
 ) : PersonService {
 
-    private var id = 1;
-
-    private val list = mutableListOf(
-        Person(id++, "Roma"), Person(id++, "Bill"), Person(id++, "Bob")
-    )
-
-    override fun getAll(): List<Person> {
-        return list
+    override suspend fun getAll(): List<Person> {
+        return personRepository.getAllPerson()
     }
 
-    override fun addOne(person: Person) {
-        person.id = id++;
-        list.add(person)
+    override suspend fun addOne(person: Person) {
+        personRepository.addOne(person)
     }
 }

@@ -3,6 +3,6 @@ package com.martynov.ktor.service.interfaces
 import com.martynov.ktor.models.Person
 
 interface PersonService {
-    fun getAll() : List<Person>
-    fun addOne(person: Person)
+    suspend fun getAll() : List<Person>
+    suspend fun addOne(person: Person)
 }

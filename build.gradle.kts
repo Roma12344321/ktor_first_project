@@ -36,4 +36,11 @@ dependencies {
     implementation("ch.qos.logback:logback-classic:$logback_version")
     testImplementation("io.ktor:ktor-server-tests-jvm")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+
+    implementation("org.hibernate:hibernate-core:5.6.15.Final")
+    implementation("org.hibernate:hibernate-entitymanager:5.6.15.Final")
+
+    implementation("com.zaxxer:HikariCP:5.0.1")
+    implementation("org.postgresql:postgresql:42.3.1")
+
 }
