@@ -1,6 +1,7 @@
 package com.martynov.ktor.di
 
 import com.martynov.ktor.models.Person
+import com.martynov.ktor.models.Post
 import com.typesafe.config.ConfigFactory
 import dagger.Module
 import dagger.Provides
@@ -29,6 +30,8 @@ class HibernateModule {
             setProperty("hibernate.hikari.maximumPoolSize", config.getString("database.hikari.maximumPoolSize"))
             setProperty("hibernate.hikari.idleTimeout", config.getString("database.hikari.idleTimeout"))
             addAnnotatedClass(Person::class.java)
+            addAnnotatedClass(Post::class.java)
+            // HERE YOUR ANNOTATED CLASSES
         }
         val serviceRegistry = StandardServiceRegistryBuilder()
             .applySettings(configuration.properties)
