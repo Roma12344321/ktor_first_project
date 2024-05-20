@@ -1,4 +1,4 @@
-package com.martynov.ktor.service.interfaces
+package com.martynov.ktor.service
 
 import com.martynov.ktor.models.Post
 

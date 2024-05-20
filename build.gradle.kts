@@ -29,6 +29,7 @@ repositories {
 dependencies {
     kapt("com.google.dagger:dagger-compiler:2.48.1")
     implementation("com.google.dagger:dagger:2.48.1")
+
     implementation("io.ktor:ktor-server-core-jvm")
     implementation("io.ktor:ktor-server-content-negotiation-jvm")
     implementation("io.ktor:ktor-serialization-jackson-jvm")
@@ -42,5 +43,7 @@ dependencies {
 
     implementation("com.zaxxer:HikariCP:5.0.1")
     implementation("org.postgresql:postgresql:42.3.1")
+
+    implementation("org.modelmapper:modelmapper:3.2.0")
 
 }

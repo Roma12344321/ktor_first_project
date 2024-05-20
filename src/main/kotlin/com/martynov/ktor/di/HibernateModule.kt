@@ -8,6 +8,7 @@ import dagger.Provides
 import org.hibernate.SessionFactory
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder
 import org.hibernate.cfg.Configuration
+import org.modelmapper.ModelMapper
 import javax.inject.Singleton
 
 
@@ -37,5 +38,10 @@ class HibernateModule {
             .applySettings(configuration.properties)
             .build()
         return configuration.buildSessionFactory(serviceRegistry)
+    }
+    @Singleton
+    @Provides
+    fun provideModelMapper() : ModelMapper {
+        return ModelMapper()
     }
 }

@@ -1,17 +1,16 @@
-package com.martynov.ktor.service
+package com.martynov.ktor.service.impl
 
 import com.martynov.ktor.models.Person
 import com.martynov.ktor.repository.PersonRepository
-import com.martynov.ktor.service.interfaces.PersonService
+import com.martynov.ktor.service.PersonService
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.withContext
 import org.hibernate.SessionFactory
 import javax.inject.Inject
 
 class PersonServiceImpl @Inject constructor(
     private val personRepository: PersonRepository,
-    private val sessionFactory: SessionFactory
+    private val sessionFactory: SessionFactory,
 ) : PersonService {
 
     override suspend fun getAll(): List<Person> {

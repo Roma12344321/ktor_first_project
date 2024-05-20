@@ -1,9 +1,9 @@
 package com.martynov.ktor.di
 
-import com.martynov.ktor.service.PersonServiceImpl
-import com.martynov.ktor.service.PostServiceImpl
-import com.martynov.ktor.service.interfaces.PersonService
-import com.martynov.ktor.service.interfaces.PostService
+import com.martynov.ktor.service.impl.PersonServiceImpl
+import com.martynov.ktor.service.impl.PostServiceImpl
+import com.martynov.ktor.service.PersonService
+import com.martynov.ktor.service.PostService
 import dagger.Binds
 import dagger.Module
 import javax.inject.Singleton

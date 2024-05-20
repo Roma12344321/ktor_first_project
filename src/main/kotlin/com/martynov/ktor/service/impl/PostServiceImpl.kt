@@ -1,10 +1,9 @@
-package com.martynov.ktor.service
+package com.martynov.ktor.service.impl
 
 import com.martynov.ktor.models.Post
 import com.martynov.ktor.repository.PersonRepository
 import com.martynov.ktor.repository.PostRepository
-import com.martynov.ktor.service.interfaces.PersonService
-import com.martynov.ktor.service.interfaces.PostService
+import com.martynov.ktor.service.PostService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.hibernate.SessionFactory

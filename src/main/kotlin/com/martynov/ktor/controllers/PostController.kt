@@ -1,7 +1,7 @@
 package com.martynov.ktor.controllers
 
 import com.martynov.ktor.models.Post
-import com.martynov.ktor.service.interfaces.PostService
+import com.martynov.ktor.service.PostService
 import io.ktor.server.application.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
